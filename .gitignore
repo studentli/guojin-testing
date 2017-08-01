@@ -1,0 +1,16 @@
+﻿# 以下文件不被管控
+##################################
+# 数据库配置文件
+#User/Home/Conf/config.php
+#User/Shop/Conf/config.php
+#snadmin/Home/Conf/config.php
+#snadmin/Shop/Conf/config.php
+#db_backup/
+*.rar
+*.apk
+*.zip
+!.gitignore
+
+# phpStudy 运行时文件
+%SystemDrive%/
+

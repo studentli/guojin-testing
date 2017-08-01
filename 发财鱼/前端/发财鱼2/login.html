@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/common.js">
+		</script>
+		<div class="wrap">
+			<img class="title animated wobble" src="img/logo.png"/>
+			<form class="login">
+				<div  class="text1"/><span class="word">手机</span><input type="text" class="phonenumber" /></div>
+				<div  class="text1" /><span class="word">密码</span><input type="password" class="password" /></div>
+				<div class="btn"><img  style="width: 100%;height: 100%;" src="img/btn.png"/><span class="word2">登录</span></div> 
+			</form>
+			<img class="forget"  src="img/forget.png"/>
+			<div class="pnumber">
+				<div class="pnumberboard">
+				   <div class="enter">请输入手机号</div>
+				   <img class="confirmbtn" src="img/confirm-longbtn.png"/>
+				</div>
+			</div>
+			<div class="fgpw">
+				<div class="fgpwboard">
+					<div style="width: 100%;height: 1px;background: transparent;"></div>
+					<img class="close" src="img/close.png"/>
+					<input type="tel" class="regested" placeholder="已注册手机号"/>
+					<input type="tel" class="idfcode" placeholder="验证码"/>
+					<img class="sendidfcode" src="img/btn-code.png"/>
+					<input type="tel" class="newpw" placeholder="新密码"/>
+					<input type="tel" class="confirm" placeholder="确认密码"/>
+					<div class="confirmchange" >确认修改</div>
+				</div>
+			</div>
+			<div class="pnumber2">
+				<div class="pnumberboard2">
+				   <div class="enter2">请输入手机号</div>
+				   <img class="confirmbtn2" src="img/confirm-longbtn.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('.btn').click(function(){
+			$('.pnumber').show();
+		})
+		$('.forget').click(function(){
+			$('.fgpw').show();
+		})
+		$('.confirmbtn').click(function(){
+			$('.pnumber').hide();
+		})
+		$('.confirmchange').click(function(){
+			$('.pnumber2').show();
+		})
+		$('.confirmbtn2').click(function(){
+			$('.pnumber2').hide();
+		})
+		$('.close').click(function(){
+			$('.fgpw').hide();
+		})
+
+	</script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/deal.css"/>
+		
+	</head>
+	<body>
+		<script type="text/javascript" src="js/common.js">
+			
+		</script>
+		<div class="deal">
+			<header class="dealhead">
+				<img class="dealwidth" src="img/deal-with.png"/><img class="dealment" src="img/deal-Manteng.png"/>
+				<img class="dealtop" src="img/deal-top.png"/>
+				<img  class="back" src="img/deal-btn.png"/>
+				<img  class="dealsculp" src="img/portait-chick.png"/>
+				<p class="dealname">盒子支付5888</p>
+			</header>
+			<div id="dealsec">
+				<section class="dealsection">
+				  <div class="dealboard board" >
+				  	<input type="text"  id="introname" value="" placeholder="推荐人用户名"/>
+				  	<input type="text"  id="" value="" placeholder="用户名"/>
+				  	<input type="text"  id="" value="" placeholder="姓名"/>
+				  	<div style="margin-top: 14px;font-size: 0.8rem;margin-left: 10%;margin-right: 5%;">
+				  		性别 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;男<div class="man"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女<div class="woman"></div>
+				  	</div>
+				  	<input type="text"  id="" value="" placeholder="手机"/>
+				  	<div style="margin-top: 14px;margin-left: 18%;font-size: 0.7rem;">所需初始小鸡数：<span style="color: #F76249;">330</span></div>
+				  	<div class="confirm">确认</div>
+				  </div>
+				  <div class="dealboard board" style="display: none;">
+				  	<img class="chicken" src="img/xj-egg.png" alt="" /><span class="storage">库存数量0</span>
+				  	<p class="expense">出售收取10%手续费</p>
+				  	<input type="text"  id="" value="" placeholder="推荐人用户名"/ style="">
+				  	<input type="text"  id="" value="" placeholder="用户名"/>
+				  	<input type="text"  id="" value="" placeholder="姓名"/>
+				  	<div class="transfer"><div class="btnon">开</div></div><p class="transferwd">使用超级转账，一键交易</p>
+				  	<div class="confirm">确认</div>
+				  </div>
+				  <div class="dealboard board" style="display: none;">
+				  	<img class="chicken" src="img/xj-01.png" alt="" /><span class="storage">库存数量0</span>
+				  	<p class="expense">出售收取10%手续费</p>
+				  	<input type="text"  id="" value="" placeholder="推荐人用户名"/ style="">
+				  	<input type="text"  id="" value="" placeholder="用户名"/>
+				  	<input type="text"  id="" value="" placeholder="姓名"/>
+				  	<div class="transfer"><div class="btnon">开</div></div><p class="transferwd">使用超级转账，一键交易</p>
+				  	<div class="confirm">确认</div>
+				  </div>
+				  
+				  <div class="dealtable board" >
+				  	<div class="buy record">购买记录</div>
+				  	<div class="sell record">出售记录</div>
+				  	<table class="tableboard"  border="0px" cellspacing="2px" cellpadding="">
+				  		<tr class="title"><td>出售人</td><td>数量</td><td>类型</td><td>时间</td><td>状态</td></tr>
+				  		<tr class="content"><td>im4664</td><td>66</td><td>小鸡</td><td>03-09</td><td>交易完成</td></tr>
+				  		<tr class="content"><td>im4664</td><td>66</td><td>小鸡</td><td>03-09</td><td>交易完成</td></tr>
+				  	</table>
+				  	<table class="tableboard"  border="0px" cellspacing="2px" cellpadding="" style="display: none;">
+				  		<tr class="title"><td>购买人</td><td>数量</td><td>类型</td><td>时间</td><td>状态</td></tr>
+				  		<tr class="content"><td>im4664</td><td>66</td><td>小鸡</td><td>03-09</td><td>交易完成</td></tr>
+				  		<tr class="content"><td>im4664</td><td>66</td><td>小鸡</td><td>03-09</td><td>交易完成</td></tr>
+				  	</table>
+				    <img class="upper" src="img/upper.png"/>
+				    <div class="number"></div>
+				    <!--<img  src="img/number.png"/>-->
+				    <img class="lower" src="img/lower.png"/>
+				  		
+				  	
+				  </div>
+			    </section>
+			    <div class="dealselect">
+				   <img src="img/1.btn.png"/>
+				   <img src="img/2.btn.png"/>
+				   <img src="img/3.btn.png"/>
+				   <img src="img/4.btn.png"/>
+			    </div>
+				
+			</div>
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('.man').click(function(){
+			$(this).css('background-color','#F76249');
+			$('.woman').css('background-color','transparent');
+		})
+		$('.woman').click(function(){
+			$(this).css('background-color','#F76249');
+			$('.man').css('background-color','transparent');
+		})
+//		.....
+		var btnon=document.getElementsByClassName('btnon')[0];
+		var transfer=document.getElementsByClassName('transfer')[0];
+		transfer.onclick=function(){
+			if(btnon.offsetLeft==0){
+				btnon.style.left=transfer.offsetWidth-btnon.offsetWidth+'px';
+				btnon.style.backgroundImage='url(img/btn-on.png)';
+				btnon.innerHTML='关';
+				
+			}else if(btnon.offsetLeft==transfer.offsetWidth-btnon.offsetWidth){
+				btnon.style.left=0;
+				btnon.style.backgroundImage='url(img/btn-off.png)';
+				btnon.innerHTML='开';
+			}
+		}
+//	....	
+var btnons=document.getElementsByClassName('btnon')[1];
+		var transfers=document.getElementsByClassName('transfer')[1];
+		transfers.onclick=function(){
+			if(btnons.offsetLeft==0){
+				btnons.style.left=transfers.offsetWidth-btnons.offsetWidth+'px';
+				btnons.style.backgroundImage='url(img/btn-on.png)';
+				btnons.innerHTML='关';
+				
+			}else if(btnons.offsetLeft==transfers.offsetWidth-btnons.offsetWidth){
+				btnons.style.left=0;
+				btnons.style.backgroundImage='url(img/btn-off.png)';
+				btnons.innerHTML='开';
+			}
+		}
+		$('.record').click(function(){
+			$('.record').css('background-image','url(img/btn-left.png)');
+			$(this).css('background-image','url(img/btn-reigth.png)');
+			var number=$(this).index();
+			$('.tableboard').hide();
+			$('.tableboard').eq(number).show();
+		})
+		$('.dealselect img').click(function(){
+			$('.dealselect img').attr('src',function(i,v){
+				return 'img/'+(i+1)+'.btn.png';
+			})
+			var selectnumber=$(this).index();
+			$(this).attr('src',function(i,v){
+				return 'img/'+(selectnumber+1)+'.btn-1.png';
+			})
+			$('.board').hide();
+			$('.board').eq(selectnumber).show();
+		})
+	</script>
+</html>
